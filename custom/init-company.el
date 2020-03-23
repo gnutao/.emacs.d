@@ -1,14 +1,35 @@
-(use-package company)
-(use-package company-c-headers)
+(use-package company
+  :ensure t
+  :config
+  (setq company-idle-delay 0.2)
+  (setq company-show-numbers t)
+  (setq company-elisp-detect-function-context nil)
+  (setq company-minimum-prefix-length 3))
+
+(use-package company-c-headers
+  :ensure t)
+
+(use-package irony
+  :ensure t
+  :config
+  (add-hook 'c++-mode-hook 'irony-mode)
+  (add-hook 'c-mode-hook 'irony-mode))
+
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map
+      [remap completion-at-point] 'counsel-irony)
+  (define-key irony-mode-map
+      [remap complete-symbol] 'counsel-irony))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(use-package company-irony
+  :ensure t
+  :config
+  (require 'company)
+  (add-to-list 'company-backend 'company-irony))
 
 (require 'company-elisp)
-(setq company-idle-delay 0.2)
-(setq company-show-numbers t)
-(setq company-elisp-detect-function-context nil)
-;; (diminish 'company-mode " ❋")
-(setq company-minimum-prefix-length 3)
-
-(add-hook 'after-init-hook 'global-company-mode)
 
 (setq company-frontends
       '(company-pseudo-tooltip-unless-just-one-frontend
@@ -58,5 +79,8 @@ In that case, insert the number."
   (define-key map (kbd "<return>") nil))
 
 (setq company-c-headers-path-system '("/usr/include/c++/7.5.0" "/usr/include/" "/usr/local/include"))
+
+(with-eval-after-load 'company
+  (add-hook 'c-mode-common-hook 'company-mode))
 
 (provide 'init-company)
