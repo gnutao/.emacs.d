@@ -27,13 +27,13 @@
 
 ;; try
 (use-package try
-	:ensure t)
+  :ensure t)
 	
 ;; which key
 (use-package which-key
-	:ensure t 
-	:config
-	(which-key-mode))
+  :ensure t
+  :config
+  (which-key-mode))
 	
 ;; ace window
 (use-package ace-window
@@ -46,40 +46,41 @@
 	
 ;; ivy, councile, swiper
 (use-package counsel
-	:ensure t
-	:bind
-	(("M-y" . counsel-yank-pop)
-	:map ivy-minibuffer-map
-	("M-y" . ivy-next-line)))
+  :ensure t
+  :bind
+  (("M-y" . counsel-yank-pop)
+   :map ivy-minibuffer-map
+   ("M-y" . ivy-next-line)))
 	
 (use-package ivy
-	:ensure t
-	:diminish (ivy-mode)
-	:bind (("C-x b" . ivy-switch-buffer))
-	:config
-	(ivy-mode 1)
-	(setq ivy-use-virtual-buffers t)
-	(setq ivy-count-format "%d/%d ")
-	(setq ivy-display-style 'fancy))
+  :ensure t
+  :diminish (ivy-mode)
+  :bind (("C-x b" . ivy-switch-buffer))
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "%d/%d ")
+  (setq ivy-display-style 'fancy))
 	
 (use-package swiper
-	:ensure t
-	:bind (("C-s" . swiper-isearch)
-	;;("C-r" . swiper-isearch)
-	("C-c C-r" . ivy-resume)
-	("M-x" . counsel-M-x)
-	("C-x C-f" . counsel-find-file))
-	:config
-	(progn
-	(ivy-mode 1)
-	(setq ivy-use-virtual-buffers t)
-	(setq ivy-display-style 'fancy)
-	(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
+  :ensure t
+  :bind
+  (("C-s" . swiper-isearch)
+   ;;("C-r" . swiper-isearch)
+   ("C-c C-r" . ivy-resume)
+   ("M-x" . counsel-M-x)
+   ("C-x C-f" . counsel-find-file))
+  :config
+  (progn
+    (ivy-mode 1)
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-display-style 'fancy)
+    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
 	
 ;; avy
 (use-package avy
-	:ensure t
-	:bind ("M-s" . avy-goto-word-1))
+  :ensure t
+  :bind ("M-s" . avy-goto-word-1))
 
 ;; grep
 (setq grep-command "grep --color --exclude-dir=obj -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
@@ -89,6 +90,10 @@
   :ensure t
   :config
   (smex-initialize))
+
+;; undo tree
+(use-package undo-tree
+  :ensure t)
 
 ;; yasnippet
 (use-package yasnippet
