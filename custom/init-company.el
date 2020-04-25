@@ -6,14 +6,14 @@
   (setq company-elisp-detect-function-context nil)
   (setq company-minimum-prefix-length 3))
 
-(use-package company-c-headers
-  :ensure t)
-
 (use-package irony
   :ensure t
   :config
   (add-hook 'c++-mode-hook 'irony-mode)
   (add-hook 'c-mode-hook 'irony-mode))
+
+(use-package company-c-headers
+  :ensure t)
 
 (defun my-irony-mode-hook ()
   (define-key irony-mode-map
@@ -39,6 +39,7 @@
       '(company-elisp
         ;; company-semantic
 	company-c-headers
+	company-irony
         company-capf
         (company-dabbrev-code company-gtags company-etags
          company-keywords)
