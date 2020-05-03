@@ -1,8 +1,10 @@
 (setq max-lisp-eval-depth 10000)
 (setq max-specpdl-size 10000)
-(setq set-language-environment "UTF-8")
 
+;; interface
+(setq set-language-environment "UTF-8")
 (setq inhibit-startup-message t)
+(tool-bar-mode -1)
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -117,6 +119,7 @@
 (require 'init-company)
 (require 'init-org-mode)
 (require 'init-custom-theme)
+(require 'init-misc)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
