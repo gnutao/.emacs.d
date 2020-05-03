@@ -41,4 +41,8 @@
 (use-package iedit
   :ensure t)
 
+;; silverseacher
+(use-package ag
+  :ensure t)
+
 (provide 'init-misc)
