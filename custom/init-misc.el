@@ -1,3 +1,5 @@
+;; ediff setup
+(setq ediff-split-window-function 'split-window-horizontally)
 
 ;; hightlights the current cursor line
 (global-hl-line-mode t)
@@ -43,6 +45,14 @@
 
 ;; silverseacher
 (use-package ag
+  :ensure t)
+
+;; origami folding
+(use-package origami
+  :ensure t)
+
+;; windresize
+(use-package windresize
   :ensure t)
 
 (provide 'init-misc)
