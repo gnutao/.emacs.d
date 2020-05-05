@@ -19,7 +19,8 @@
 (use-package swiper
   :ensure t
   :bind
-  (("C-s" . swiper-isearch)
+  ;; (("C-s" . swiper-isearch)
+  (("C-s" . counsel-grep-or-swiper)
    ;;("C-r" . swiper-isearch)
    ("C-c C-r" . ivy-resume)
    ("M-x" . counsel-M-x)
@@ -42,7 +43,11 @@
 (global-set-key (kbd "C-c m j") 'counsel-git-grep)
 (global-set-key (kbd "C-c m i") 'counsel-imenu)
 (global-set-key (kbd "C-c m k") 'counsel-ag)
+(global-set-key (kbd "C-c m r") 'counsel-rg)
+(global-set-key (kbd "C-c m d") 'counsel-dired)
 (global-set-key (kbd "C-c m l") 'counsel-locate)
+(global-set-key (kbd "C-c m o") 'ivy-occur)
+(global-set-key (kbd "C-c m s") 'swiper-thing-at-point)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 (provide 'init-ivy-mode)
