@@ -73,10 +73,6 @@
   (yas-reload-all)
   (yas-global-mode 1))
 
-;; magit
-(use-package magit
-  :ensure t)
-
 ;; my custome setup
 (require 'init-ivy-mode)
 (require 'init-cc-mode)
