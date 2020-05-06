@@ -62,4 +62,6 @@
 (use-package windresize
   :ensure t)
 
+(global-set-key (kbd "C-c m w") 'windresize)
+
 (provide 'init-misc)
