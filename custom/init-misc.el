@@ -52,7 +52,9 @@
 
 ;; silverseacher
 (use-package ag
-  :ensure t)
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c g") 'ag))
 
 ;; origami folding
 (use-package origami
@@ -60,8 +62,8 @@
 
 ;; windresize
 (use-package windresize
-  :ensure t)
-
-(global-set-key (kbd "C-c m w") 'windresize)
+  :ensure t
+  :config
+  (global-set-key (kbd "C-c m w") 'windresize))
 
 (provide 'init-misc)

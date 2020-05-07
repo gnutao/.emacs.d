@@ -1,4 +1,9 @@
 auto-save-list
 elpa
 recentf
+transient
+*~
+eshell
+smex-items
+irony
 
