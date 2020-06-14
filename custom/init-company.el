@@ -39,6 +39,7 @@
       '(company-elisp
         ;; company-semantic
 	company-c-headers
+	company-clang
 	company-irony
         company-capf
         (company-dabbrev-code company-gtags company-etags

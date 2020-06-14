@@ -66,4 +66,12 @@
   :config
   (global-set-key (kbd "C-c m w") 'windresize))
 
+;; projectile
+(use-package projectile
+  :ensure t
+  :bind ("C-c p" . projectile-command-map)
+  :config
+  (projectile-global-mode)
+  (setq projectile-completion-system 'ivy))
+
 (provide 'init-misc)

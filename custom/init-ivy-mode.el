@@ -20,7 +20,8 @@
   :ensure t
   :bind
   ;; (("C-s" . swiper-isearch)
-  (("C-s" . counsel-grep-or-swiper)
+  ;; (("C-s" . counsel-grep-or-swiper)
+  (("C-s" . swiper)
    ;;("C-r" . swiper-isearch)
    ("C-c C-r" . ivy-resume)
    ("M-x" . counsel-M-x)

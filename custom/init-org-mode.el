@@ -16,4 +16,15 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; reveil.js
+(use-package ox-reveal
+  :ensure t
+  :config
+  (require 'ox-reveal)
+  (setq org-reveal-root "file:///home/k3-user/fixhd/.emacs.d/reveal.js/")
+  (setq org-reveal-mathjax t))
+
+(use-package htmlize
+  :ensure t)
+
 (provide 'init-org-mode)
