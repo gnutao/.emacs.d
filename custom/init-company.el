@@ -80,7 +80,8 @@ In that case, insert the number."
                         (self-insert-command 1)))
   (define-key map (kbd "<return>") nil))
 
-(setq company-c-headers-path-system '("/usr/include/c++/7.5.0" "/usr/include/" "/usr/local/include"))
+;;(setq company-c-headers-path-system '("/usr/include/c++/7.5.0" "/usr/include/" "/usr/local/include"))
+(setq company-c-headers-path-system '("/home/k3-user/K3_SYSTEM/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/7.3.1" "/home/k3-user/K3_SYSTEM/output/host/include" ))
 
 (with-eval-after-load 'company
   (add-hook 'c-mode-common-hook 'company-mode))

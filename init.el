@@ -91,7 +91,11 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (magit irony which-key use-package try counsel ace-window))))
+    (magit irony which-key use-package try counsel ace-window)))
+ '(safe-local-variable-values
+   (quote
+    ((company-clang-arguments "-I/home/k3-user/K3_SYSTEM/output/host/include" "-I/home/k3-user/K3_SYSTEM/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/7.3.1")
+     (company-clang-arguments "-I/home/k3-user/K3_SYSTEM/output/host/include" "-I/home/k3-user/K3_SYSTEM/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/7.3.1" "-I/home/k3-user/K3_SYSTEM/package/k3driver/source" "-I/home/k3-user/K3_SYSTEM/package/k3handler/source")))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
