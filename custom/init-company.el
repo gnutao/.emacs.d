@@ -39,11 +39,13 @@
       '(company-elisp
         ;; company-semantic
 	company-c-headers
+	company-dabbrev-code
+	company-gtags
 	company-clang
 	company-irony
         company-capf
-        (company-dabbrev-code company-gtags company-etags
-         company-keywords)
+        ;;(company-dabbrev-code company-gtags company-etags
+        ;; company-keywords)
         company-files
         company-dabbrev))
 
