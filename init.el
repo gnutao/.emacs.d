@@ -44,8 +44,7 @@
   (progn
   (setq aw-scope 'global) ;; was frame
   (global-set-key (kbd "C-x O") 'other-frame)
-    (global-set-key [remap other-window] 'ace-window)))
-	
+    (global-set-key [remap other-window] 'ace-window)))	
 
 ;; grep
 (setq grep-command "grep --color --exclude-dir=obj --exclude-dir=obj.genconf -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
@@ -60,17 +59,18 @@
 (use-package undo-tree
   :ensure t)
 
+;; eglot for lsp
+(use-package eglot
+  :ensure t)
+
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+
 ;; yasnippet
 (use-package yasnippet
   :ensure t
-  :init
-  (setq yas-snippet-dirs
-	'("~/.emacs.d/snippets"
-	  "~/.emacs.d/elpa/yasnippet-snippets-20200606.1149/snippets"))
   :config
-  (use-package yasnippet-snippets
-    :ensure t)
-  (yas-reload-all)
   (yas-global-mode 1))
 
 ;; my custome setup
@@ -91,11 +91,8 @@
  '(org-startup-indented t)
  '(package-selected-packages
    (quote
-    (magit irony which-key use-package try counsel ace-window)))
- '(safe-local-variable-values
-   (quote
-    ((company-clang-arguments "-I/home/k3-user/K3_SYSTEM/output/host/include" "-I/home/k3-user/K3_SYSTEM/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/7.3.1")
-     (company-clang-arguments "-I/home/k3-user/K3_SYSTEM/output/host/include" "-I/home/k3-user/K3_SYSTEM/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/7.3.1" "-I/home/k3-user/K3_SYSTEM/package/k3driver/source" "-I/home/k3-user/K3_SYSTEM/package/k3handler/source")))))
+    (magit which-key use-package try counsel ace-window)))
+ )
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
