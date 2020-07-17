@@ -59,24 +59,11 @@
 (use-package undo-tree
   :ensure t)
 
-;; eglot for lsp
-(use-package eglot
-  :ensure t)
-
-;;(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-
-;; yasnippet
-(use-package yasnippet
-  :ensure t
-  :config
-  (yas-global-mode 1))
 
 ;; my custome setup
 (require 'init-ivy-mode)
 (require 'init-cc-mode)
-(require 'init-company)
+(require 'init-eglot)
 (require 'init-org-mode)
 (require 'init-custom-theme)
 (require 'init-misc)
