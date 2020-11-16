@@ -1,9 +1,11 @@
 
 ;; eglot for lsp
 (use-package eglot
-  :ensure t)
+  :ensure t
+  :config
+  (setq eglot-confirm-server-initiated-edits t))
 
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) . ("clangd" "--header-insertion=never")))
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
