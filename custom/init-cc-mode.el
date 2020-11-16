@@ -7,6 +7,7 @@
   
   (setq c-basic-offset 4)
   (c-set-offset 'substatement-open 0)
+  (c-set-offset 'inline-open 0)
   
   (c-toggle-hungry-state 1)
   
