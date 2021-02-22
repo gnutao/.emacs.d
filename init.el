@@ -1,3 +1,6 @@
+;; remove warning "package cl is deprecated" in emacs 27.1
+(setq byte-compile-warnings '(cl-functions))
+
 (setq max-lisp-eval-depth 10000)
 (setq max-specpdl-size 10000)
 
@@ -76,10 +79,7 @@
  '(org-hide-leading-stars t)
  '(org-startup-folded t)
  '(org-startup-indented t)
- '(package-selected-packages
-   (quote
-    (magit which-key use-package try counsel ace-window)))
- )
+ '(package-selected-packages '(magit which-key use-package try counsel ace-window)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
