@@ -66,6 +66,7 @@
 ;; my custome setup
 (require 'init-ivy-mode)
 (require 'init-cc-mode)
+(require 'clang-rename)
 (require 'init-eglot)
 (require 'init-org-mode)
 (require 'init-custom-theme)
