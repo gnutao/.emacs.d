@@ -62,6 +62,12 @@
 (use-package undo-tree
   :ensure t)
 
+;; column-number-mode
+(setq column-number-mode t)
+
+;; compilation
+(setq compilation-scroll-output t)
+;; (setq compilation-scroll-output 'first-error)
 
 ;; my custome setup
 (require 'init-ivy-mode)
@@ -80,7 +86,8 @@
  '(org-hide-leading-stars t)
  '(org-startup-folded t)
  '(org-startup-indented t)
- '(package-selected-packages '(magit which-key use-package try counsel ace-window)))
+ '(package-selected-packages
+   '(cmake-mode magit which-key use-package try counsel ace-window)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

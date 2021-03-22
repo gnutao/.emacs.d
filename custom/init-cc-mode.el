@@ -6,6 +6,7 @@
   (message "my-c-mode-setup called (buffer-file-name)=%s" (buffer-file-name))
   
   (setq c-basic-offset 4)
+  (setq tab-width 4)
   (c-set-offset 'substatement-open 0)
   (c-set-offset 'inline-open 0)
   
@@ -20,6 +21,9 @@
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 
 (use-package clang-format
+  :ensure t)
+
+(use-package cmake-mode
   :ensure t)
 
 (provide 'init-cc-mode)
