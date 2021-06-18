@@ -52,6 +52,9 @@
 ;; grep
 (setq grep-command "grep --color --exclude-dir=obj --exclude-dir=obj.genconf -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
 
+;; default gdb command
+(setq gud-gdb-command-name "arm-gdb -i=mi -x ~/kp3.dbg")
+
 ;; smex
 (use-package smex
   :ensure t
