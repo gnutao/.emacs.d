@@ -40,6 +40,10 @@
 
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> j") 'counsel-set-variable)
+(global-set-key (kbd "C-c m b") 'counsel-switch-buffer)
+(global-set-key (kbd "C-c m c") 'counsel-compile)
+(global-set-key (kbd "C-c m f") 'counsel-fzf)
 (global-set-key (kbd "C-c m g") 'counsel-git)
 (global-set-key (kbd "C-c m j") 'counsel-git-grep)
 (global-set-key (kbd "C-c m i") 'counsel-imenu)
@@ -49,6 +53,7 @@
 (global-set-key (kbd "C-c m l") 'counsel-locate)
 (global-set-key (kbd "C-c m o") 'ivy-occur)
 (global-set-key (kbd "C-c m s") 'swiper-thing-at-point)
+(global-set-key (kbd "C-c m t") 'counsel-pt)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 (provide 'init-ivy-mode)
