@@ -47,4 +47,10 @@
 (with-eval-after-load 'project
     (add-to-list 'project-find-functions 'my-projectile-project-find-function))
 
+(define-key eglot-mode-map (kbd "C-c e c") 'eglot-reconnect)
+(define-key eglot-mode-map (kbd "C-c e r") 'eglot-rename)
+(define-key eglot-mode-map (kbd "C-c e f") 'eglot-format)
+(define-key eglot-mode-map (kbd "C-c e s") 'eglot-shutdown)
+(define-key eglot-mode-map (kbd "C-c e h") 'eldoc)
+
 (provide 'init-eglot)

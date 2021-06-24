@@ -49,8 +49,12 @@
   (global-set-key (kbd "C-x O") 'other-frame)
     (global-set-key [remap other-window] 'ace-window)))	
 
+;; wgrep
+(use-package wgrep
+  :ensure t)
+
 ;; grep
-(setq grep-command "grep --color --exclude-dir=obj --exclude-dir=obj.genconf -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
+;; (setq grep-command "grep --color --exclude-dir=obj --exclude-dir=obj.genconf -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
 
 ;; default gdb command
 (setq gud-gdb-command-name "arm-gdb -i=mi -x ~/kp3.dbg")
@@ -71,6 +75,8 @@
 ;; compilation
 (setq compilation-scroll-output t)
 ;; (setq compilation-scroll-output 'first-error)
+
+(show-paren-mode)
 
 ;; my custome setup
 (require 'init-ivy-mode)
