@@ -66,4 +66,7 @@
   :config
   (global-set-key (kbd "C-c m w") 'windresize))
 
+;; gdb key binding
+(global-set-key (kbd "C-c d") 'gdb)
+
 (provide 'init-misc)

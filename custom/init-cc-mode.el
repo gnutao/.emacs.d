@@ -11,6 +11,11 @@
   (c-set-offset 'inline-open 0)
   
   (c-toggle-hungry-state 1)
+
+  ;; compilation
+  (setq compilation-scroll-output t)
+  ;; (setq compilation-scroll-output 'first-error)
+
   
   (local-set-key (kbd "C-x C-o") 'ff-find-other-file))
 

@@ -72,10 +72,6 @@
 ;; column-number-mode
 (setq column-number-mode t)
 
-;; compilation
-(setq compilation-scroll-output t)
-;; (setq compilation-scroll-output 'first-error)
-
 (show-paren-mode)
 
 ;; my custome setup

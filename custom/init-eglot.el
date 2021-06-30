@@ -1,19 +1,3 @@
-
-;; eglot for lsp
-(use-package eglot
-  :ensure t
-  :config
-  (setq eglot-confirm-server-initiated-edits t))
-
-;; c/c++ server
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) . ("clangd" "--header-insertion=never")))
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-
-;; bash server
-(add-to-list 'eglot-server-programs '(sh-mode . ("bash-language-server" "start")))
-(add-hook 'sh-mode-hook 'eglot-ensure)
-
 ;; yasnippet
 (use-package yasnippet
   :ensure t
@@ -51,6 +35,22 @@
 
 (with-eval-after-load 'project
     (add-to-list 'project-find-functions 'my-projectile-project-find-function))
+
+;; eglot for lsp
+(use-package eglot
+  :ensure t
+  :config
+  (setq eglot-confirm-server-initiated-edits t))
+
+;; c/c++ server
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) . ("clangd" "--header-insertion=never")))
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+
+;; bash server
+(add-to-list 'eglot-server-programs '(sh-mode . ("bash-language-server" "start")))
+(add-hook 'sh-mode-hook 'eglot-ensure)
+
 
 (define-key eglot-mode-map (kbd "C-c e c") 'eglot-reconnect)
 (define-key eglot-mode-map (kbd "C-c e r") 'eglot-rename)
