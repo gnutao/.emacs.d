@@ -58,6 +58,9 @@
 (global-set-key (kbd "C-c i s") 'counsel-set-variable)
 (global-set-key (kbd "C-c i t") 'swiper-thing-at-point)
 (global-set-key (kbd "C-c i v") 'counsel-describe-variable)
+(global-set-key (kbd "C-c i w") 'ivy-switch-view)
+(global-set-key (kbd "C-c i x") 'ivy-push-view)
+(global-set-key (kbd "C-c i y") 'ivy-pop-view)
 (global-set-key (kbd "C-c i z") 'counsel-fzf)
 
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
