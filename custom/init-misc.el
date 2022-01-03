@@ -7,7 +7,7 @@
 ;; flashes the cursor's line when you scroll
 (use-package beacon
   :ensure t
-  :config
+  :init
   (beacon-mode 1))
 
 ;; deltes all the white space when hit backspace
@@ -29,6 +29,7 @@
   :config
   (global-set-key (kbd "C-c me") 'mc/edit-lines)
   (global-set-key (kbd "C-c mn") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-c q") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-c mp") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c ma") 'mc/mark-all-like-this))
 

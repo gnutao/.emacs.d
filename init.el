@@ -7,7 +7,17 @@
 ;; interface
 (setq set-language-environment "UTF-8")
 (setq inhibit-startup-message t)
+
 (tool-bar-mode -1)
+;;(menu-bar-mode -1)
+;;(scroll-bar-mode -1)
+
+(setq tab-width 4)
+
+;; disable backup file and auto save
+(setq make-backup-file nil)
+(setq auto-save-default nil)
+
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -52,6 +62,12 @@
 ;; wgrep
 (use-package wgrep
   :ensure t)
+
+;; use y or n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; no ring bell sound
+(setq ring-bell-function 'ignore)
 
 ;; grep
 ;; (setq grep-command "grep --color --exclude-dir=obj --exclude-dir=obj.genconf -nHI -r /home/k3-user/K3_SYSTEM/package/k3system/source -e ")
@@ -99,4 +115,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :extend nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1 :width normal :foundry "default" :family "default")))))
